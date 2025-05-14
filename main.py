@@ -1,0 +1,189 @@
+import os
+import pandas as pd
+
+def exibir_nome_do_programa(): 
+    '''Essa função é responsável por exibir o nome do programa '''
+    print('''
+░█████╗░░█████╗░███████╗███████╗███████╗███████╗  ░██████╗██╗░░██╗░█████╗░██████╗░░██████╗
+██╔══██╗██╔══██╗██╔════╝██╔════╝██╔════╝██╔════╝  ██╔════╝██║░░██║██╔══██╗██╔══██╗██╔════╝
+██║░░╚═╝██║░░██║█████╗░░█████╗░░█████╗░░█████╗░░  ╚█████╗░███████║██║░░██║██████╔╝╚█████╗░
+██║░░██╗██║░░██║██╔══╝░░██╔══╝░░██╔══╝░░██╔══╝░░  ░╚═══██╗██╔══██║██║░░██║██╔═══╝░░╚═══██╗
+╚█████╔╝╚█████╔╝██║░░░░░██║░░░░░███████╗███████╗  ██████╔╝██║░░██║╚█████╔╝██║░░░░░██████╔╝
+░╚════╝░░╚════╝░╚═╝░░░░░╚═╝░░░░░╚══════╝╚══════╝  ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░░░░╚═════╝░
+
+████████╗██╗░█████╗░  ██████╗░░█████╗░░██████╗░█████╗░
+╚══██╔══╝██║██╔══██╗  ██╔══██╗██╔══██╗██╔════╝██╔══██╗
+░░░██║░░░██║███████║  ██████╔╝██║░░██║╚█████╗░███████║
+░░░██║░░░██║██╔══██║  ██╔══██╗██║░░██║░╚═══██╗██╔══██║
+░░░██║░░░██║██║░░██║  ██║░░██║╚█████╔╝██████╔╝██║░░██║
+░░░╚═╝░░░╚═╝╚═╝░░╚═╝  ╚═╝░░╚═╝░╚════╝░╚═════╝░╚═╝░░╚═╝''')
+
+def exibir_opcoes():
+    '''Exibe as opções disponíveis no menu principal '''
+    print(90*"-")
+    print()
+    print('1.Produtos')
+    print('2.Pedidos')
+    print('3.Clientes')
+    print('4.Sair\n')
+
+def sair():
+    '''É responsável por limpar o terminal e finalizar o programa
+    Output:
+    -Exibe a mensagem de Finalização para o usuário
+    '''
+    os.system('cls')
+    print('Saindo do programa\n')
+
+def escolher_opcao():
+    '''Essa função é responsável por perguntar qual a opção desejada pelo usuário, verificar se essa opção é válida, caso seja válida, encaminhar a resposta para a função que cada opção tem.Caso inválida, encaminha para a função responsável pelos erros. 
+    Input:
+    -recebe a opção escolhida pelo usuário
+    Output:
+    -Executa a opção desejada pelo usuário'''
+    try:
+        opcao_escolhida = int(input('Escolha uma opção: ')) 
+        match opcao_escolhida :
+            case 1:
+                print('Menu de Produtos:')
+                Menu_produtos()
+
+            case 2:
+                print('Pedidos')
+            case 3:
+                print('Clientes')
+            case 4:
+                sair()
+    except:
+        opcao_invalida()
+
+
+def Menu_produtos():
+
+    exibir_subtitulos('Menu de Produtos')
+
+    '''Exibe as opções disponíveis no menu de produtos '''
+    print('1.Cadastrar novo produto')
+    print('2.Exibir produtos')
+    print('3.Voltar para o menu principal')
+    print()
+    escolher_opcao_menu_produtos()
+
+def escolher_opcao_menu_produtos():
+    '''Essa função é responsável por perguntar qual a opção desejada pelo usuário, verificar se essa opção é válida,caso seja válida, encaminhar a resposta para a função que cada opção tem.Caso inválida, encaminha para a função responsável pelos erros. 
+    Input:
+    -recebe a opção escolhida pelo usuário
+    Output:
+    -Executa a opção desejada pelo usuário'''
+    try:
+        opcao_escolhida_produtos = int(input('Escolha uma opção: ')) 
+        match opcao_escolhida_produtos:
+
+            case 1:
+                print('Cadastrar novo produto')
+                cadastrar_novo_produto()
+            case 2:
+                print('Exibir produtos')
+                exibir_produtos()
+
+            case 3:
+                print('Voltar para o menu principal')
+                voltar_ao_menu_principal()
+                
+    except:
+        opcao_invalida()
+
+def exibir_subtitulos (texto):
+    '''Essa função é responsável por limpar o terminal, exibir o subtítulo da opção escolhida pelo usuário'''
+    os.system('cls')
+    linha = '-' * len(texto)
+    print(linha)
+    print(texto)
+    print(linha)
+    print()
+
+
+def cadastrar_novo_produto():
+    """Cadastra um novo produto (Adionando ao arquivo csv)"""
+    exibir_subtitulos('Cadastrando Novo Produto')
+    nome_novo_produto = input('Digite o nome do produto: ')
+    valor_novo_produto = input('Digite o valor do produto: ')
+    ingredientes_novo_produto = input('Digite os ingredientes do produto: ')
+    try:
+        #Verifica se tem vírgula e trata vírgula como separador decimal
+        valor_novo_produto = float(valor_novo_produto.replace(',' , '.')) 
+    except ValueError:
+        print("Valor inválido. Certifique-se de usar números.")
+        return
+
+    novo_produto = pd.DataFrame({'produto': [nome_novo_produto], 'valor': [valor_novo_produto], 'ingredientes': [ingredientes_novo_produto]})
+
+    try:
+        # Tenta ler o arquivo CSV existente
+        df_existente = pd.read_csv('base_produtos.csv', sep=';')
+        # Concatena o DataFrame existente com o novo produto
+        df_completo = pd.concat([df_existente, novo_produto], ignore_index=True)
+        # Escreve de volta para o CSV, sem o índice
+        df_completo.to_csv('base_produtos.csv', index=False, sep=';')
+        print(f"Produto '{nome_novo_produto}' adicionado com sucesso!")
+    except FileNotFoundError:
+        # Se o arquivo não existir, cria um novo com o produto
+        novo_produto.to_csv('base_produtos.csv', index=False, sep=';')
+        print(f"Arquivo '{'base_produtos.csv'}' não encontrado. Produto '{nome_novo_produto}' criado!")
+    except Exception as e:
+        print(f"Ocorreu um erro ao adicionar o novo produto: {e}")
+    voltar_ao_menu_principal()
+
+def exibir_produtos():
+    exibir_subtitulos('Lista de Produto cadastrados:')
+
+    df = pd.read_csv('base_produtos.csv', sep=';')
+    print(df)
+    
+
+
+
+def voltar_ao_menu_principal():
+    '''Essa função é responsável por voltar à tela inicial do programa na tela
+    Input:
+    -Pede para o usuário confirmar a volta pra tela inicial
+    Output:
+    -Retorna ao menu principal
+    '''
+    
+    input('Clique "ENTER" para voltar ao menu inicial\n')
+    main()
+
+def opcao_invalida():
+    '''Essa função é acionada quando há algum erro na solicitação do usuário 
+    e aciona a função de retorno à tela inicial
+    Output:
+    -Exibe uma mensagem de erro para o usuário
+    '''
+    # print('Opção inválida!')
+    voltar_ao_menu_principal()
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+def  main():
+    '''Essa função é responsável por limpar o terminal,exibir o nome do programa, exibir as opções e exibir a mensagem na qual o usuário irá informar a opção desejada'''
+    os.system('cls')
+    exibir_nome_do_programa()
+    exibir_opcoes()
+    escolher_opcao()
+
+if __name__ == '__main__' :
+    main()
