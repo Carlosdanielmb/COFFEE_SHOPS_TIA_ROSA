@@ -65,7 +65,11 @@ def cadastrar_novo_cliente():
     Output:
     -Adiciona o cliente ao arquivo csv'''
     exibir_subtitulos('Cadastrando Novo Cliente')
+
+    # Recebe o nome do novo cliente
     nome_novo_cliente = input('Digite o nome do cliente: ')
+
+    #Recebe o cpf do novo cliente 
     cpf_novo_cliente = input('Digite o CPF do cliente,digite apenas números:')
 
     # Verifica se o CPF contém apenas números
@@ -75,8 +79,9 @@ def cadastrar_novo_cliente():
     # Verifica se o CPF tem 11 dígitos
     if len(cpf_novo_cliente) != 11:
         print("CPF inválido. O CPF deve ter 11 dígitos.")
-        return  
-    data_nascimento_novo_cliente = input('Digite a data de nascimento do cliente: ')
+        return
+    
+    data_nascimento_novo_cliente = input('Digite a data de nascimento do cliente com o Formato dd/mm/aaaa: ')
     
     novo_cliente = pd.DataFrame({'nome': [nome_novo_cliente], 'cpf': [cpf_novo_cliente], 'data_nascimento': [data_nascimento_novo_cliente]})
 
@@ -120,7 +125,6 @@ def escolher_opcao_menu_clientes():
                 exibir_clientes()
 
             case 3:
-                print('Voltar para o menu principal')
                 voltar_ao_menu_principal()
                 
     except:
@@ -211,6 +215,11 @@ def exibir_produtos():
 
     df = pd.read_csv('base_produtos.csv', sep=';')
     print(df)
+    print()
+    print(80*"-")
+    print()
+    voltar_ao_menu_principal()
+
     
 
 
