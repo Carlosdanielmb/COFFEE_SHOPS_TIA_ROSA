@@ -14,22 +14,21 @@ ambiente acolhedor. Com o crescimento da concorrência e a digitalização acele
 mercado, a nova diretora, Maria, identificou diversas dificuldades operacionais e de divulgação
 que afetam a experiência dos clientes e a eficiência da equipe. Entre os principais problemas
 observados estão:
-*1. Ausência de um sistema de gestão interno:*
+1. Ausência de um sistema de gestão interno:
 Atualmente, todos os pedidos são feitos de forma manual, em papel. Isso gera
 confusões nos horários de pico, aumenta o tempo de espera e dificulta o controle de
 estoque e de vendas diárias.
-*2. Falta de organização no cardápio e nas informações dos produtos:*
+2. Falta de organização no cardápio e nas informações dos produtos:
 Muitos clientes têm dúvidas sobre os ingredientes dos itens, preços e promoções. A
 falta de uma apresentação clara e acessível desses dados impacta negativamente na
 tomada de decisão do consumidor.
-*3. Dificuldade na fidelização de clientes:*
+3. Dificuldade na fidelização de clientes:
 A cafeteria não possui um sistema de cadastro de clientes, o que inviabiliza a criação
 de estratégias de fidelização, como promoções personalizadas ou programas de
 pontos.
-*4. Equipe com baixa familiaridade com tecnologia:*
+4. Equipe com baixa familiaridade com tecnologia:
 Os colaboradores têm pouca ou nenhuma formação na área de informática. Isso exige
 que qualquer solução tecnológica desenvolvida seja simples, intuitiva e eficiente.
 
 ### Objetivo Geral:
 O objetivo geral deste projeto é desenvolver um sistema de gestão para a cafeteria Coffee Shops Tia Rosa, que permita otimizar o atendimento ao cliente, melhorar a organização interna e facilitar o controle de vendas e estoque. O sistema deve ser simples e intuitivo, levando em consideração a formação limitada dos colaboradores em tecnologia.
-
