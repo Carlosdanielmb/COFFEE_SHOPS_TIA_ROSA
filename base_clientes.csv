@@ -1,4 +1,4 @@
-nome;cpf;data_nascimento
+cliente;cpf;data_nascimento
 Aurora Silva;369852147-08;09/04/2003
 Benício Oliveira;014785236-91;25/06/1976
 Cecília Rodrigues;987654321-09;28/09/1992
@@ -15,4 +15,3 @@ Natália Gomes;789654123-08;18/12/1998
 Otávio Barbosa;603987412-09;25/06/1976
 Pietra Rocha;936521478-06;29/12/1976
 Carlos;081.234.567-89;01/01/1990
-

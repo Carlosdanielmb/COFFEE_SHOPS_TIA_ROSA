@@ -50,11 +50,48 @@ def escolher_opcao():
 
             case 2:
                 print('Pedidos')
+                print('infelizmente ainda não consegui implementar essa parte do sistema')
             case 3:
                 print('Clientes')
                 Menu_Clientes()
             case 4:
                 sair()
+    except:
+        opcao_invalida()
+
+
+'''Clientes'''
+
+def Menu_Clientes():
+    exibir_subtitulos('Menu de Clientes')
+
+    '''Exibe as opções disponíveis no menu de clientes '''
+    print('1.Cadastrar novo cliente')
+    print('2.Exibir clientes')
+    print('3.Voltar para o menu principal')
+    print()
+    escolher_opcao_menu_clientes()
+
+def escolher_opcao_menu_clientes():
+    '''Essa função é responsável por perguntar qual a opção desejada pelo usuário, verificar se essa opção é válida,caso seja válida, encaminhar a resposta para a função que cada opção tem.Caso inválida, encaminha para a função responsável pelos erros. 
+    Input:
+    -recebe a opção escolhida pelo usuário
+    Output:
+    -Executa a opção desejada pelo usuário'''
+    try:
+        opcao_escolhida_menu_clientes = int(input('Escolha uma opção: ')) 
+        match opcao_escolhida_menu_clientes:
+
+            case 1:
+                print('Cadastrar novo cliente')
+                cadastrar_novo_cliente()
+            case 2:
+                print('Exibir clientes')
+                exibir_clientes()
+
+            case 3:
+                voltar_ao_menu_principal()
+                
     except:
         opcao_invalida()
 
@@ -107,41 +144,8 @@ def exibir_clientes():
     df = pd.read_csv('base_clientes.csv', sep=';')
     print(df)
 
-def escolher_opcao_menu_clientes():
-    '''Essa função é responsável por perguntar qual a opção desejada pelo usuário, verificar se essa opção é válida,caso seja válida, encaminhar a resposta para a função que cada opção tem.Caso inválida, encaminha para a função responsável pelos erros. 
-    Input:
-    -recebe a opção escolhida pelo usuário
-    Output:
-    -Executa a opção desejada pelo usuário'''
-    try:
-        opcao_escolhida_menu_clientes = int(input('Escolha uma opção: ')) 
-        match opcao_escolhida_menu_clientes:
 
-            case 1:
-                print('Cadastrar novo cliente')
-                cadastrar_novo_cliente()
-            case 2:
-                print('Exibir clientes')
-                exibir_clientes()
-
-            case 3:
-                voltar_ao_menu_principal()
-                
-    except:
-        opcao_invalida()
-    
-def Menu_Clientes():
-    exibir_subtitulos('Menu de Clientes')
-
-    '''Exibe as opções disponíveis no menu de clientes '''
-    print('1.Cadastrar novo cliente')
-    print('2.Exibir clientes')
-    print('3.Voltar para o menu principal')
-    print()
-    escolher_opcao_menu_clientes()
-
-
-
+'''Produtos'''
 
 
 def Menu_produtos():
@@ -249,9 +253,9 @@ def opcao_invalida():
     Output:
     -Exibe uma mensagem de erro para o usuário
     '''
-    # print('Opção inválida!')
+    print('Opção inválida!')
     voltar_ao_menu_principal()
-    main()
+    
  
 def  main():
     '''Essa função é responsável por limpar o terminal,exibir o nome do programa, exibir as opções e exibir a mensagem na qual o usuário irá informar a opção desejada'''
