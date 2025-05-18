@@ -33,43 +33,22 @@ que qualquer solução tecnológica desenvolvida seja simples, intuitiva e efici
 ### Objetivo Geral:
 O objetivo geral deste projeto é desenvolver um sistema de gestão para a cafeteria Coffee Shops Tia Rosa, que permita otimizar o atendimento ao cliente, melhorar a organização interna e facilitar o controle de vendas e estoque. O sistema deve ser simples e intuitivo, levando em consideração a formação limitada dos colaboradores em tecnologia.
 
-### *Arquivo main.py*
+## *Arquivo main.py*
 
-|Funções| Descrição | Parâmetros|
---------------------------------------------------------------------------
-|exibir_nome_do_programa | Exibe o nome do programa | Nenhum |
+### |Funções| Descrição | Parâmetros|
+------------------------------------
+#### |exibir_nome_do_programa | Exibe o nome do programa | Nenhum |
+#### |exibir_opcoes | Exibe as opções disponíveis no menu principal | Nenhum |
+#### |sair | Encerra o programa | Nenhum |
+#### |escolher_opcao | Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
+#### |Menu_produtos| Exibe o menu de produtos | Nenhum |
+#### |escolher_opcao_menu_produtos| Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
 ---------------------------------------------------------------------------
-|exibir_opcoes | Exibe as opções disponíveis no menu principal | Nenhum |
----------------------------------------------------------------------------
-|sair | Encerra o programa | Nenhum |
----------------------------------------------------------------------------
-|escolher_opcao | Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
----------------------------------------------------------------------------
+#### |cadastrar_novo_produto|Cadastra um novo produto (Adionando ao arquivo csv)| Nenhum |
+#### |exibir_produtos|Exibe os produtos cadastrados no sistema | Nenhum |
+#### |Menu_clientes| Exibe o menu de clientes | Nenhum |
+#### |escolher_opcao_menu_clientes| Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
+#### |cadastrar_novo_cliente|Cadastra um novo cliente (Adionando ao arquivo csv)| Nenhum |
+#### |exibir_clientes|Exibe os clientes cadastrados no sistema | Nenhum |
 
-### *Arquivo produtos.py*
-
-|Funções| Descrição | Parâmetros|
---------------------------------------------------------------------------
-Menu_produtos| Exibe o menu de produtos | Nenhum |
----------------------------------------------------------------------------
-escolher_opcao_menu_produtos| Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
----------------------------------------------------------------------------
-cadastrar_novo_produto|Cadastra um novo produto (Adionando ao arquivo csv)| Nenhum |
----------------------------------------------------------------------------
-exibir_produtos|Exibe os produtos cadastrados no sistema | Nenhum |
-
-### *Arquivo clientes.py*
-
-|Funções| Descrição | Parâmetros|
----------------------------------------------------------------------------
-Menu_clientes| Exibe o menu de clientes | Nenhum |
----------------------------------------------------------------------------
-escolher_opcao_menu_clientes| Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
----------------------------------------------------------------------------
-cadastrar_novo_cliente|Cadastra um novo cliente (Adionando ao arquivo csv)| Nenhum |
----------------------------------------------------------------------------
-exibir_clientes|Exibe os clientes cadastrados no sistema | Nenhum |
-
-### *Arquivo pedidos.py*
-
-Arquivo em desenvolvimento ...
+###### *Opção 2 do menu principal desenvolvimento ...*
