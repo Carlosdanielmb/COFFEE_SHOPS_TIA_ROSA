@@ -50,8 +50,13 @@ def escolher_opcao():
 
             case 2:
                 print('Pedidos')
-                print('infelizmente ainda não consegui implementar essa parte do sistema')
+                exibir_subtitulos('Menu de Pedidos')
+                print('Infelizmente ainda não consegui implementar essa parte do sistema')
+                print()
+                voltar_ao_menu_principal()
+
             case 3:
+
                 print('Clientes')
                 Menu_Clientes()
             case 4:
@@ -120,7 +125,7 @@ def cadastrar_novo_cliente():
     
     data_nascimento_novo_cliente = input('Digite a data de nascimento do cliente com o Formato dd/mm/aaaa: ')
     
-    novo_cliente = pd.DataFrame({'nome': [nome_novo_cliente], 'cpf': [cpf_novo_cliente], 'data_nascimento': [data_nascimento_novo_cliente]})
+    novo_cliente = pd.DataFrame({'cliente': [nome_novo_cliente], 'cpf': [cpf_novo_cliente], 'data_nascimento': [data_nascimento_novo_cliente]})
 
     try:
         # Tenta ler o arquivo CSV existente
