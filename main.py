@@ -58,8 +58,6 @@ def escolher_opcao():
         print('Opção inválida! Digite um número entre 1 e 4.')
         opcao_invalida()
 
-
-
 '''Produtos'''
 
 def menu_produtos():
@@ -144,10 +142,10 @@ def exibir_produtos():
         print(" Voltando ao menu principal.")
         voltar_ao_menu_principal()
 
-
 '''Pedidos'''
 
 def menu_pedidos():
+    # Função para exibir o menu de pedidos, permitir ao usuário escolher uma opção e chamar a função correspondente
     while True:
         os.system("cls")
         exibir_subtitulos("Menu de Pedidos")
@@ -174,8 +172,8 @@ def menu_pedidos():
             print("Opção inválida.")
             opcao_invalida()
 
-
 def novo_pedido():
+    # Função para criar um novo pedido, solicitar o CPF do cliente, selecionar produtos e enviar os dados para a função salvar_pedido
     os.system("cls")
     exibir_subtitulos("Novo Pedido")
 
@@ -248,6 +246,7 @@ def novo_pedido():
         continue
 
 def salvar_pedido(pedido):
+    '''Função responsável por salvar o novo pedido no arquivo CSV.'''
     try:
         df_pedidos = pd.read_csv("base_pedidos.csv", sep=";")
         novo_id = df_pedidos["id_pedido"].max() + 1
@@ -261,6 +260,7 @@ def salvar_pedido(pedido):
         df_novo_pedido.to_csv("base_pedidos.csv", sep=";", index=False)
 
 def exibir_pedidos():
+    '''Função responsável por exibir os pedidos registrados.'''
     os.system("cls")
     exibir_subtitulos("Exibir Pedidos")
     try:
@@ -288,31 +288,8 @@ def exibir_pedidos():
         print(" Voltando ao menu principal.")
         voltar_ao_menu_principal()
 
-def cancelar_pedido():
-    os.system("cls")
-    exibir_subtitulos("Cancelar Pedido")
-    try:
-        df_pedidos = pd.read_csv("base_pedidos.csv", sep=";")
-        print("Pedidos Registrados:")
-        print(df_pedidos[['id_pedido', 'cliente_cpf', 'data_hora', 'itens', 'total', 'status']].to_string(index=False))
-        print()
-        print(100*"-")
-        print()
-
-        id_cancelar = int(input("Digite o ID do pedido a cancelar: "))
-        if id_cancelar in df_pedidos["id_pedido"].values:
-            df_pedidos.loc[df_pedidos["id_pedido"] == id_cancelar, "status"] = "Cancelado"
-            df_pedidos.to_csv("base_pedidos.csv", sep=";", index=False)
-            print("Pedido cancelado com sucesso!")
-        else:
-            print("Pedido não encontrado.")
-    except FileNotFoundError:
-        print("Ainda não há pedidos registrados.")
-    except ValueError:
-        print("ID de pedido inválido.")
-        menu_pedidos()
-
 def alterar_status_pedido():
+    '''Função responsável por alterar o status de um pedido existente.'''
     os.system("cls")
     exibir_subtitulos("Alterar Status do Pedido")
     try:
@@ -346,6 +323,31 @@ def alterar_status_pedido():
         print("ID de pedido inválido.")
         menu_pedidos()
     voltar_ao_menu_principal()
+
+def cancelar_pedido():
+    '''Função responsável por cancelar um pedido existente.'''
+    os.system("cls")
+    exibir_subtitulos("Cancelar Pedido")
+    try:
+        df_pedidos = pd.read_csv("base_pedidos.csv", sep=";")
+        print("Pedidos Registrados:")
+        print(df_pedidos[['id_pedido', 'cliente_cpf', 'data_hora', 'itens', 'total', 'status']].to_string(index=False))
+        print()
+        print(100*"-")
+        print()
+
+        id_cancelar = int(input("Digite o ID do pedido a cancelar: "))
+        if id_cancelar in df_pedidos["id_pedido"].values:
+            df_pedidos.loc[df_pedidos["id_pedido"] == id_cancelar, "status"] = "Cancelado"
+            df_pedidos.to_csv("base_pedidos.csv", sep=";", index=False)
+            print("Pedido cancelado com sucesso!")
+        else:
+            print("Pedido não encontrado.")
+    except FileNotFoundError:
+        print("Ainda não há pedidos registrados.")
+    except ValueError:
+        print("ID de pedido inválido.")
+        menu_pedidos()
 
 
 
@@ -450,6 +452,8 @@ def exibir_clientes():
         voltar_ao_menu_principal()   
 
 
+'''Funções de apoio'''
+
 def exibir_subtitulos (texto):
     '''Essa função é responsável por limpar o terminal, exibir o subtítulo da opção escolhida pelo usuário'''
     os.system('cls')
@@ -460,7 +464,7 @@ def exibir_subtitulos (texto):
     print()
 
 def voltar_ao_menu_principal():
-    '''Essa função é responsável por voltar à tela inicial do programa na tela
+    '''Essa função é responsável por voltar à tela inicial do programa 
     Input:
     -Pede para o usuário confirmar a volta pra tela inicial
     Output:
@@ -479,7 +483,6 @@ def opcao_invalida():
     print('Opção inválida!')
     voltar_ao_menu_principal()
     
- 
 def  main():
     '''Essa função é responsável por limpar o terminal,exibir o nome do programa, exibir as opções e exibir a mensagem na qual o usuário irá informar a opção desejada'''
     os.system('cls')
