@@ -33,22 +33,37 @@ que qualquer solução tecnológica desenvolvida seja simples, intuitiva e efici
 ### Objetivo Geral:
 O objetivo geral deste projeto é desenvolver um sistema de gestão para a cafeteria Coffee Shops Tia Rosa, que permita otimizar o atendimento ao cliente, melhorar a organização interna e facilitar o controle de vendas e estoque. O sistema deve ser simples e intuitivo, levando em consideração a formação limitada dos colaboradores em tecnologia.
 
-## *Arquivo main.py*
+### *Arquivo main.py*
 
-### |Funções| Descrição | Parâmetros|
-------------------------------------
-#### |exibir_nome_do_programa | Exibe o nome do programa | Nenhum |
-#### |exibir_opcoes | Exibe as opções disponíveis no menu principal | Nenhum |
-#### |sair | Encerra o programa | Nenhum |
-#### |escolher_opcao | Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
-#### |Menu_produtos| Exibe o menu de produtos | Nenhum |
-#### |escolher_opcao_menu_produtos| Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
----------------------------------------------------------------------------
-#### |cadastrar_novo_produto|Cadastra um novo produto (Adionando ao arquivo csv)| Nenhum |
-#### |exibir_produtos|Exibe os produtos cadastrados no sistema | Nenhum |
-#### |Menu_clientes| Exibe o menu de clientes | Nenhum |
-#### |escolher_opcao_menu_clientes| Recebe a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
-#### |cadastrar_novo_cliente|Cadastra um novo cliente (Adionando ao arquivo csv)| Nenhum |
-#### |exibir_clientes|Exibe os clientes cadastrados no sistema | Nenhum |
+|---|---|---|
+| Funções Principais | Descrição | Parâmetro |
+|---|---|---|
+| exibir_nome_do_programa | Função responsável por exibir o nome do programa | Nenhum |
+| exibir_opcoes | Função responsável por exibir as opções disponíveis no menu principal | Nenhum |
+| sair | Função responsável por limpar o terminal e finalizar o programa | Nenhum |
+| escolher_opcao | Função responsável por receber a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
+| menu_produtos| Função responsável por exibir o menu de produtos | Nenhum |
+| escolher_opcao_menu_produtos| Função responsável por receber a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
+| cadastrar_novo_produto|Função responsável por cadastrar um novo produto (Adionando ao arquivo csv)| Nenhum |
+| exibir_produtos|Função responsável por exibir os produtos cadastrados no sistema | Nenhum |
+| menu_pedidos | Função responsável por exibir o menu de pedidos, permitir ao usuário escolher uma opção e chamar a função correspondente| Nenhum |
+| novo_pedido | Função responsável por criar um novo pedido, solicitar o CPF do cliente, selecionar produtos e enviar os dados para a função salvar_pedido| Nenhum |
+| salvar_pedido | Função responsável por salvar o novo pedido no arquivo CSV| pedido |
+| exibir_pedidos |Função responsável por exibir os pedidos registrados | Nenhum |
+| alterar_status_pedido | Função responsável por alterar o status de um pedido existente | Nenhum |
+| cancelar_pedido | Função responsável por cancelar um pedido existente | Nenhum |
+|menu_clientes| Função responsável por exibir o menu de clientes e as opções disponíveis para o usuário | Nenhum |
+|escolher_opcao_menu_clientes| Função responsável por receber a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
+|cadastrar_novo_cliente|Função responsável por cadastrar um novo cliente (Adionando ao arquivo csv)| Nenhum |
+|exibir_clientes|Função responsável por exibir os clientes cadastrados no sistema | Nenhum |
+|---|---|---|
 
-###### *Opção 2 do menu principal desenvolvimento ...*
+
+|---|---|---|
+| Funções de apoio | Descrição | Parâmetro |
+|---|---|---| 
+| exibir_subtitulos | Função responsável por limpar o terminal, exibir o subtítulo da opção escolhida pelo usuário| texto |
+| voltar_ao_menu_principal | Função responsável por voltar à tela inicial do programa | Nenhum |
+| opcao_invalida | Essa função é responsável por tratar qualquer erro na solicitação do usuário | Nenhum |
+| main | Essa função é responsável por limpar o terminal,exibir o nome do programa, exibir as opções e exibir a mensagem na qual o usuário irá informar a opção desejada | Nenhum |
+|---|---|---|
