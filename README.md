@@ -153,8 +153,3 @@ Carlos Daniel Marques Brito
 ### Contato
     Qualquer dúvida ou sugestões entre em contato pelo e-mail.
 *- E-mail: marquescarlosdaniel78@gmail.com*
-
-
-<p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS%20DO%20PROJETO &message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
-</p>
