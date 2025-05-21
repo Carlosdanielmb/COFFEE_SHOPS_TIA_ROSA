@@ -34,6 +34,7 @@ que qualquer solução tecnológica desenvolvida seja simples, intuitiva e efici
 O objetivo geral deste projeto é desenvolver um sistema de gestão para a cafeteria Coffee Shops Tia Rosa, que permita otimizar o atendimento ao cliente, melhorar a organização interna e facilitar o controle de vendas e estoque. O sistema deve ser simples e intuitivo, levando em consideração a formação limitada dos colaboradores em tecnologia.
 
 ### *Arquivo main.py*
+### *Arquivo main.py*
 
  
 | Funções Principais | Descrição | Parâmetro |
