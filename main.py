@@ -468,7 +468,7 @@ def voltar_ao_menu_principal():
     Input:
     -Pede para o usuário confirmar a volta pra tela inicial
     Output:
-    -Retorna ao menu principal
+    -Retorna ao menu principal do sistema
     '''
     
     input('Clique "ENTER" para voltar ao menu inicial\n')
