@@ -87,10 +87,11 @@ Este é arquivo principal, onde o código é executado.
 
 Exemplo de dados:
 
+```csv
 id_produto;produto;valor;ingredientes
 1;Cafe sem acucar;1.5;Água quente e Po de Cafe Santa Clara
 2;Cafe com acucar;2.0;Água quente acucar e Po de Cafe Santa Clara
-
+```
 
 - Exemplo para `base_clientes.csv`: 
 
@@ -100,11 +101,14 @@ id_produto;produto;valor;ingredientes
 | cpf | CPF do cliente (11 dígitos) |
 | data_nascimento |	Data de nascimento (dd/mm/aaaa) |
 
+
 Exemplo de dados:
 
+```csv
 cliente;cpf;data_nascimento
 Aurora Silva;36985214708;09/04/2003
 Benício Oliveira;01478523691;25/06/1976
+```
 
 
 - Exemplo para `base_pedidos.csv`:
@@ -119,12 +123,13 @@ Benício Oliveira;01478523691;25/06/1976
 | status | Status do pedido (Em preparo, Concluído, Cancelado) |
 
 Exemplo de dados:
-
+```csv
 id_pedido;cliente_cpf;data_hora;itens;total;status
 1;36985214708;27/10/2024 10:00;Produto: Café,Quantidade: 2,Valor Unitário: 5.0;13.0;Concluído
 2;210987654-05;27/10/2024 11:00;Produto: Cappuccino,Quantidade: 1,Valor Unitário: 8.0;8.0;Em preparo
 3;08123456789;27/10/2024 12:00;Produto: Bolo de Cenoura,Quantidade: 1,Valor Unitário: 15.0;15.0;Em preparo
 4;74185296304;27/10/2024 13:00;Produto: Torta de Maçã,Quantidade: 1,Valor Unitário: 12.0;12.0;Cancelado
+```
 
 ### Licença
 
