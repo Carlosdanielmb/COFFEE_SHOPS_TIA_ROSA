@@ -35,7 +35,7 @@ O objetivo geral deste projeto é desenvolver um sistema de gestão para a cafet
 
 ### *Arquivo main.py*
 
-|---|---|---|
+ 
 | Funções Principais | Descrição | Parâmetro |
 |---|---|---|
 | exibir_nome_do_programa | Função responsável por exibir o nome do programa | Nenhum |
@@ -56,14 +56,11 @@ O objetivo geral deste projeto é desenvolver um sistema de gestão para a cafet
 |escolher_opcao_menu_clientes| Função responsável por receber a opção escolhida pelo usuário e executa a opção desejada pelo usuário | Nenhum |
 |cadastrar_novo_cliente|Função responsável por cadastrar um novo cliente (Adionando ao arquivo csv)| Nenhum |
 |exibir_clientes|Função responsável por exibir os clientes cadastrados no sistema | Nenhum |
-|---|---|---|
 
-
-|---|---|---|
 | Funções de apoio | Descrição | Parâmetro |
 |---|---|---| 
 | exibir_subtitulos | Função responsável por limpar o terminal, exibir o subtítulo da opção escolhida pelo usuário| texto |
 | voltar_ao_menu_principal | Função responsável por voltar à tela inicial do programa | Nenhum |
 | opcao_invalida | Essa função é responsável por tratar qualquer erro na solicitação do usuário | Nenhum |
 | main | Essa função é responsável por limpar o terminal,exibir o nome do programa, exibir as opções e exibir a mensagem na qual o usuário irá informar a opção desejada | Nenhum |
-|---|---|---|
+

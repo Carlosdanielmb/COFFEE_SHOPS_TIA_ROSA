@@ -1,0 +1,5 @@
+id_pedido;cliente_cpf;data_hora;itens;total;status
+1;369852147-08;27/10/2024 10:00;Produto: Café,Quantidade: 2,Valor Unitário: 5.0,Produto: Pão de Queijo, Quantidade: 1, Valor Unitário: 3.0;13.0;Concluído
+2;210987654-05;27/10/2024 11:00;Produto: Cappuccino,Quantidade: 1,Valor Unitário: 8.0;8.0;Em preparo
+3;08123456789;27/10/2024 12:00;Produto: Bolo de Cenoura,Quantidade: 1,Valor Unitário: 15.0;15.0;Em preparo
+4;74185296304;27/10/2024 13:00;Produto: Torta de Maçã,Quantidade: 1,Valor Unitário: 12.0;12.0;Cancelar

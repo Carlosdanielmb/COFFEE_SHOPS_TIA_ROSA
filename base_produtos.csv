@@ -1,14 +1,16 @@
-produto;valor;ingredientes
-Cafe sem acucar;1.5;Água quente e Po de Cafe Santa Clara
-Cafe com acucar;2.0;Águagua quente acucar e Po de Cafe Santa Clara
-Cafe com Leite;5.0;Café coado e leite quente
-Cafe Gelado;6.0;Cafe expresso frio e gelo
-Cha Quente;4.5;Agua quente e sache de cha
-Chocolate Quente;7.0;Chocolate em pe leite e acucar
-Pao de Queijo;3.0;Polvilho queijo minas ovos e leite
-Bolo de Cenoura;8.0;Cenoura farinha de trigo ovos oleo e cobertura de chocolate
-Misto-quente;4.5;Pão,Queijo e Presunto
-Tapioca;5.0;Goma de tapioca e queijo coalho
-Pudim;10.0;Leite condensado, leite, ovos e acucar
-Torta de Maçã;12.0;Maçãs, farinha de trigo, manteiga, açúcar e canela
-Água mineral;1.0;Água filtrada
+id_produto;produto;valor;ingredientes
+1;Cafe sem acucar;1.5;Água quente e Po de Cafe Santa Clara
+2;Cafe com acucar;2.0;Águagua quente acucar e Po de Cafe Santa Clara
+3;Cafe com Leite;5.0;Café coado e leite quente
+4;Cafe Gelado;6.0;Cafe expresso frio e gelo
+5;Cha Quente;4.5;Agua quente e sache de cha
+6;Chocolate Quente;7.0;Chocolate em pe leite e acucar
+7;Pao de Queijo;3.0;Polvilho queijo minas ovos e leite
+8;Bolo de Cenoura;8.0;Cenoura farinha de trigo ovos oleo e cobertura de chocolate
+9;Misto-quente;4.5;Pão,Queijo e Presunto
+10;Tapioca;5.0;Goma de tapioca e queijo coalho
+11;Pudim;10.0;Leite condensado, leite, ovos e acucar
+12;Torta de Maçã;12.0;Maçãs, farinha de trigo, manteiga, açúcar e canela
+13;Água mineral;1.0;Água filtrada
+14;Coca-cola 2L;8.0;Coca-Cola
+15;H20 Limoneto;5.0;água gaseificada, suco concentrado de limão
