@@ -1,8 +1,13 @@
-# **Coffee Shops Tia Rosa**
+<h1 align="center">Coffee Shops Tia Rosa</h1>
+    
+
+<p align="center">
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS%20DO%20PROJETO &message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
+</p>
 
 ## *AA- Atividade Ativa de Desenvolvimento em Python para a graduação de Engenharia de Software do Centro universitário IESB*
-### Estudante: Carlos Daniel Marques Brito
-#### Professor: Francisco Lima
+Estudante: Carlos Daniel Marques Brito <br>
+Professor: Francisco Lima
 
 
 ### Descrição do projeto:
@@ -74,7 +79,9 @@ Este é arquivo principal, onde o código é executado.
 | main | Essa função é responsável por limpar o terminal,exibir o nome do programa, exibir as opções e exibir a mensagem na qual o usuário irá informar a opção desejada | Nenhum |
 
 
-## Exemplos de dados dos arquivos CSV
+
+### Exemplos de dados dos arquivos CSV
+
 
 - Exemplo para `base_produtos.csv`:
 
@@ -131,13 +138,18 @@ id_pedido;cliente_cpf;data_hora;itens;total;status
 4;74185296304;27/10/2024 13:00;Produto: Torta de Maçã,Quantidade: 1,Valor Unitário: 12.0;12.0;Cancelado
 ```
 
+## ✔️ Tecnologia utilizada
+
+- ``Python 3``
+
+
 ### Licença
 
 Este projeto está licenciado sob a licença MIT.
 
-### Autor:
+### Autor
 Carlos Daniel Marques Brito
 
-### Contato:
+### Contato
     Qualquer dúvida ou sugestões entre em contato pelo e-mail.
 *- E-mail: marquescarlosdaniel78@gmail.com*
